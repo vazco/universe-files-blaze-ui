@@ -1,7 +1,7 @@
 Package.describe({
     summary: 'Views for universe:files with upload buttons and cropping avatar functionality',
     name: 'universe:files-blaze-ui',
-    version: '0.1.0'
+    version: '0.1.1'
 });
 
 Package.onUse(function (api) {
@@ -10,7 +10,7 @@ Package.onUse(function (api) {
         'ecmascript', 'templating', 'less@1.0.0||2.0.0', 'random', 'ejson',
         'cristo:auto-install-npm@0.0.5', 'reactive-var', 'universe:i18n-blaze@1.5.1',
         'universe:collection@2.3.9', 'universe:files@1.0.4', 'universe:i18n@1.6.0', 'tracker',
-        'cristo:state-in-templates@1.0.1', 'aldeed:simple-schema@1.5.3'
+        'cristo:state-in-templates@1.0.3', 'aldeed:simple-schema@1.5.3'
     ]);
 
     api.use('aldeed:autoform@5.5.0', 'client', {weak: true});
