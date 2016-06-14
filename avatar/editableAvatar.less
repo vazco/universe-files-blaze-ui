@@ -1,0 +1,69 @@
+.avatar-container {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  cursor: pointer;
+  img {
+    width: 128px;
+    height: 128px;
+  }
+  .zone,
+  .dz-preview,
+  .dz-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 128px;
+    z-index: 1;
+  }
+
+  .editable-avatar-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .remove-avatar,
+  .dz-error-mark {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+  }
+
+  .remove-avatar {
+    display: none;
+  }
+
+  &:hover {
+    .remove-avatar {
+      display: block;
+    }
+  }
+}
+
+.crop-modal {
+  img {
+    max-width: 100%
+  }
+}
+
+.editable-avatar-image {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+
+  &.no-avatar {
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    background-color: #D3D3D3;
+  }
+}

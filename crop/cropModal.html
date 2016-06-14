@@ -1,0 +1,16 @@
+<template name="cropModal">
+    <div class="modal fade js-crop-modal crop-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="js-crop-image-container">
+                    <img id="cropped-image" src="{{src}}">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default js-cancel" data-dismiss="modal">{{__ 'universe:files-blaze-ui.close'}}</button>
+                    <button type="button" class="btn btn-primary js-save">{{__ 'universe:files-blaze-ui.save'}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,27 @@
+<template name="universeAvatar">
+    <div class="avatar-container" title="{{__ 'universe:files-blaze-ui.dropzoneMsgs.dictImageMessage'}}">
+        {{#let url=getUrl}}
+            {{#if url}}
+                <img class="editable-avatar-image {{class}}" src="{{url}}">
+                {{else}}
+                <div class="editable-avatar-image {{class}} no-avatar">
+                    {{__ 'universe:files-blaze-ui.dropzoneMsgs.dictImageMessage'}}
+                </div>
+            {{/if}}
+        {{/let}}
+        {{#if isRemovable}}
+        <div class="js-remove-avatar remove-avatar btn btn-xs btn-danger">
+            <span class="glyphicon glyphicon-remove"></span>
+        </div>
+        {{/if}}
+        <div class="js-avatar-zone zone"></div>
+    </div>
+</template>
+
+
+<template name="afUniverseAvatar">
+    <div data-schema-key="{{name}}" name="{{name}}">
+        {{> universeAvatar _state=_state class=atts.class name=name value=value maxFilesize=maxFilesize
+        previewTemplateName=previewTemplateName acceptedFiles=acceptedFiles isRemovable=isRemovable}}
+    </div>
+</template>

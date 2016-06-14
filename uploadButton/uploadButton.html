@@ -1,0 +1,33 @@
+<template name="universeUploadButton">
+    <a type="button" class="{{#unless class}}btn btn-outline btn-primary btn-sm{{else}}{{class}}{{/unless}}"
+    title="{{#if isImage}}{{__ '.dropzoneMsgs.dictImageMessage'}}{{else}}{{__ '.dropzoneMsgs.dictDefaultMessage'}}{{/if}}">
+        {{#if Template.contentBlock}}
+            {{> Template.contentBlock}}
+        {{else}}
+            <i class="fa fa-upload upload-icon"></i>
+            {{#if text}}
+                {{text}}
+            {{else}}
+                {{__ '.upload'}}
+            {{/if}}
+        {{/if}}
+    </a>
+</template>
+
+<template name="_universeUploadButton_preview">
+    <i class="hidden"></i>
+</template>
+
+<template name="afUniverseUploadButton">
+    <div data-schema-key="{{name}}" name="{{name}}">
+        {{#if Template.contentBlock}}
+            {{#universeUploadButton _state=_state class=class name=name value=value maxFilesize=maxFilesize
+            previewTemplateName=previewTemplateName acceptedFiles=acceptedFiles isImage=isImage}}
+                {{> Template.contentBlock }}
+            {{/universeUploadButton}}
+        {{else}}
+            {{> universeUploadButton _state=_state class=class name=name value=value maxFilesize=maxFilesize
+            previewTemplateName=previewTemplateName acceptedFiles=acceptedFiles isImage=isImage}}
+        {{/if}}
+    </div>
+</template>
