@@ -26,8 +26,10 @@ Template.universeUploadButton.onRendered(function () {
             uploadMultiple: false,
             maxFilesize,
             acceptedFiles,
-            previewTemplate: Blaze.toHTMLWithData(Template[previewTemplateName], data)
+            previewTemplate: Blaze.toHTMLWithData(Template[previewTemplateName], data),
+            clickable: this.$('*').get()
         };
+
         if (this.dropZone) {
             this.dropZone.destroy();
         }
