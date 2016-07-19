@@ -1,7 +1,7 @@
 Package.describe({
     summary: 'Views for universe:files with upload buttons and cropping avatar functionality',
     name: 'universe:files-blaze-ui',
-    version: '0.1.2'
+    version: '0.1.3'
 });
 
 Package.onUse(function (api) {
