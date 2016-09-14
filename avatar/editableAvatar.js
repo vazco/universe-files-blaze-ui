@@ -28,6 +28,10 @@ Template.universeAvatar.onRendered(function () {
             uploadMultiple: disabledCropper,
             maxFiles: 1,
             maxFilesize,
+            headers: {
+                'Cache-Control': null,
+                'X-Requested-With': null
+            },
             acceptedFiles,
             previewTemplate: Blaze.toHTMLWithData(Template[previewTemplateName], data)
         });
