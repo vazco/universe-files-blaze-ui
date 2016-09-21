@@ -89,9 +89,12 @@ Template.universeAvatar.helpers({
     },
     getUrl () {
         const tmpl = Template.instance();
-        const {value} = tmpl.data || {};
+        const {value, isAbsuluteURL} = tmpl.data || {};
         const res = tmpl.state.get('result') || {};
-        const tmplPath = res.path || (value && value.path );
+        const tmplPath = res.path || (value && value.path ) || (typeof value === 'string' && value);
+        if (isAbsuluteURL) {
+            return value;
+        }
         if (tmplPath) {
             return FileCollection.getFullFileUrl(tmplPath);
         }
