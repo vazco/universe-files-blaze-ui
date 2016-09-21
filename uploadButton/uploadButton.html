@@ -21,12 +21,12 @@
 <template name="afUniverseUploadButton">
     <div data-schema-key="{{name}}" name="{{name}}">
         {{#if Template.contentBlock}}
-            {{#universeUploadButton _state=_state class=class name=name value=value maxFilesize=maxFilesize
+            {{#universeUploadButton _state=_shareState class=class name=name value=value maxFilesize=maxFilesize
             previewTemplateName=previewTemplateName acceptedFiles=acceptedFiles isImage=isImage}}
                 {{> Template.contentBlock }}
             {{/universeUploadButton}}
         {{else}}
-            {{> universeUploadButton _state=_state class=class name=name value=value maxFilesize=maxFilesize
+            {{> universeUploadButton _state=_shareState class=class name=name value=value maxFilesize=maxFilesize
             previewTemplateName=previewTemplateName acceptedFiles=acceptedFiles isImage=isImage}}
         {{/if}}
     </div>
