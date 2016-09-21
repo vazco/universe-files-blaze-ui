@@ -81,7 +81,7 @@ Template.universeAvatar.onRendered(function () {
     });
 
 });
-
+const absoluteUrlReg = /[a-z]+:\/\//;
 Template.universeAvatar.helpers({
     getFieldName () {
         const data = Template.currentData() || {};
@@ -89,13 +89,13 @@ Template.universeAvatar.helpers({
     },
     getUrl () {
         const tmpl = Template.instance();
-        const {value, isAbsuluteURL} = tmpl.data || {};
+        const {value} = tmpl.data || {};
         const res = tmpl.state.get('result') || {};
         const tmplPath = res.path || (value && value.path ) || (typeof value === 'string' && value);
-        if (isAbsuluteURL) {
-            return value;
-        }
         if (tmplPath) {
+            if (absoluteUrlReg.test(tmplPath)) {
+                return value;
+            }
             return FileCollection.getFullFileUrl(tmplPath);
         }
         return '';
