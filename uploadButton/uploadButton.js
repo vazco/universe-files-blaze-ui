@@ -21,7 +21,7 @@ Template.universeUploadButton.onRendered(function () {
             acceptedFiles = isImage ? ACCEPTED_IMAGES : ACCEPTED_FILES;
         }
         const options = {
-            url: FileCollection.getUploadingUrl(isImage),
+            url: FileCollection.getUploadingUrl(isImage).replace(/^\//, Meteor.absoluteUrl()),
             paramName: name,
             uploadMultiple: false,
             maxFilesize,
