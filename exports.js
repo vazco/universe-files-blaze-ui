@@ -1,5 +1,5 @@
-export const ACCEPTED_FILES = '.gif,.jpg,.jpeg,.png,.pdf,.doc,.docx,.zip,.rar,.pages,.abw,.odt,.ps,.txt,.md';
-export const ACCEPTED_IMAGES = '.gif,.jpg,.jpeg,.png';
+export const ACCEPTED_FILES = '.gif,.jpg,.jpeg,.png,.svg,.pdf,.doc,.docx,.zip,.rar,.pages,.abw,.odt,.ps,.txt,.md';
+export const ACCEPTED_IMAGES = '.gif,.jpg,.jpeg,.png,.svg';
 export const DEFAULT_FILESIZE = 2;
 
 /**
