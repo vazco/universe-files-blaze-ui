@@ -1,6 +1,14 @@
-## Abandonware
+<h1 align="center">
+    <a href="https://github.com/vazco">vazco</a>/Universe Files Blaze UI
+</h1>
 
-# Universe Files Blaze UI
+&nbsp;
+
+<h3 align="center">
+  -- Abandonware. This package is deprecated! --
+</h3>
+
+&nbsp;
 
 ## Using as standalone
 
@@ -117,3 +125,9 @@ const mySchema = new SimpleSchema(Object.assign({
     {{/autoForm}}
 </template>
 ```
+
+## License
+
+<img src="https://vazco.eu/banner.png" align="right">
+
+**Like every package maintained by [Vazco](https://vazco.eu/), Universe Files Blaze UI is [MIT licensed](https://github.com/vazco/uniforms/blob/master/LICENSE).**
